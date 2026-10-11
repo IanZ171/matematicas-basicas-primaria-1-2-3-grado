@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen de Matemáticas - Primaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Pantalla de Inicio -->
+        <div id="home-screen" class="screen active">
+            <h1>🧠 Práctica de Matemáticas</h1>
+            <p>Elige un nivel para comenzar tu prueba (10 ejercicios por nivel):</p>
+            <div class="btn-group">
+                <button onclick="startQuiz(1)" class="btn btn-level1">Nivel 1 (Sumas y Restas)</button>
+                <button onclick="startQuiz(2)" class="btn btn-level2">Nivel 2 (Suma, Resta, Multiplicación y División)</button>
+            </div>
+        </div>
+
+        <!-- Pantalla de Examen -->
+        <div id="quiz-screen" class="screen">
+            <h2 id="quiz-title">Prueba</h2>
+            <div id="questions-container"></div>
+            <button onclick="submitQuiz()" class="btn btn-submit">Enviar Respuestas</button>
+        </div>
+
+        <!-- Pantalla de Resultados -->
+        <div id="result-screen" class="screen">
+            <h2>Resultados de la Prueba</h2>
+            <div id="score-display"></div>
+            <p id="feedback-msg"></p>
+            <button onclick="resetQuiz()" class="btn btn-restart">Intentar de Nuevo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
